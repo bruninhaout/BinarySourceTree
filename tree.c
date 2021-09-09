@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <malloc.h>
 #include "tree.h"
+#include "treeNode.h"
 
 
 TREE* construtorTree(){
-  TREE tree;
-  tree.raiz = NULL;
-  
-  return tree;
-
   TREE* newTree = (TREE*) malloc(sizeof(TREE));
-  (*newTree).raiz = NULL;
+  newTree->raiz = NULL;
 
   return newTree;
+}
+void addValueInTree(TREE* tree, int valor){
+  PNODE nodo = constructTreeNode(valor);
+  tree->raiz = addTreeNode(tree->raiz, nodo);
 }

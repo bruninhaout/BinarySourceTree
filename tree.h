@@ -8,6 +8,6 @@ typedef struct {
 
 TREE* construtorTree();
 
-void addValueInTree();
+void addValueInTree(TREE* tree, int valor);
 
 #endif

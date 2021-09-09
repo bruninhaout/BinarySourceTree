@@ -26,14 +26,31 @@ PNODE addTreeNode(PNODE raiz, PNODE newNode){
 }
 //Contador de nó
 int contarTreeNode(PNODE raiz){
+  if(raiz == NULL) return 0;
+      return 0;
 
-return 0;
+  return 1 + contarTreeNode(raiz->esquerda) + contarTreeNode(raiz->direita);
 }
 //Imprimi-dor de nó 
 void imprimirTreeNode(PNODE raiz){
+  if(raiz != NULL){
+    printf("%d", raiz->valor);
+    printf("(");
+    imprimirTreeNode(raiz->esquerda);
+    imprimirTreeNode(raiz->direita);
+    printf(")");
+  }
 
 }
 //procurador de nó
 PNODE searchTreeNode(PNODE raiz, int search){
-return NULL;
+    if(raiz==NULL) return NULL;
+    if(raiz->valor == search) return raiz;
+
+    if (raiz->valor < raiz->valor)
+      return searchTreeNode(raiz->esquerda, search);
+
+    return searchTreeNode(raiz->direita, search);
+
+
 }
