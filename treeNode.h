@@ -11,6 +11,7 @@ typedef TREENODE* PNODE;
 /*PNODE = Ponteiro de Tree Node*/
 PNODE constructTreeNode(int valor);
 PNODE addTreeNode(PNODE raiz, PNODE newNode);
+PNODE removeTreeNode(PNODE root, int valor);
 int contarTreeNode(PNODE raiz);
 void imprimirTreeNode(PNODE raiz);
 PNODE searchTreeNode(PNODE raiz, int search);
